@@ -1,4 +1,5 @@
 Angular 1 starter project
+
 Technologies
 > Angular v1.3.15
 
