@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="alurapic">
     <head>
+        <base href="/">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Alurapic</title>
@@ -10,30 +11,16 @@
 
         <script src="js/lib/angular.min.js"></script>
         <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers/fotos-controller.js"></script>
+        <script src="js/controllers/foto-controller.js"></script>
         <script src="js/directives/minhas-diretivas.js"></script>
 
     </head>
-    <body ng-controller="FotosController">
+    <body>
         <div class="container">
-            <div class="jumbotron">
-                <h1 class="text-center">Alurapic</h1>    
-            </div>    
-            <div class="row">
-                <div class="col-md-12">
-                    <form>
-                        <input class="form-control" type="text" name="filter" placeholder="Procurar pelo titulo da foto" ng-model="filtro" ng-model-otpions="{debounce: 500}">
-                    </form>
-                </div>
-            </div>
-
-            <div class="row">
-                <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
-                    <minha-foto titulo="{{foto.titulo}}" url="{{foto.url}}"> </minha-foto>
-                    
-                </meu-painel>
-            </div>
+            <ng-view> </ng-view>
 
         </div> <!-- fim container -->        
     </body>
