@@ -1,4 +1,5 @@
-angular.module('alurapic').controller('FotosController', function($scope, $routeParams, recursoFoto){
+angular.module('alurapic')
+.controller('FotosController', function($scope, $routeParams, recursoFoto){
 
 	$scope.fotos = [];
 	$scope.filtro = '';
