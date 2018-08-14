@@ -15,7 +15,7 @@ angular.module('alurapic').controller('FotosController', function($scope, $route
 		console.log('remover foto:');
 		console.log(foto);
 
-		recursoFoto.delete(function(){
+		recursoFoto.delete({fotoId: foto._id}, function(){
 			var indiceFoto = $scope.fotos.indexOf(foto);
 			$scope.fotos.splice(indiceFoto, 1);
 			$scope.mensagem = 'Foto ' + foto.titulo + ' foi removida com sucesso';
